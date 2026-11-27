@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dl8tcvffhaj13"]
+
+[node name="Key" type="Button" unique_id=1444279448]
+custom_minimum_size = Vector2(40, 40)
+focus_mode = 0
+text = "A"

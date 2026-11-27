@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://x1jf1nbh8bn1"]
+
+[ext_resource type="PackedScene" uid="uid://bxq487n0dbem" path="res://dictionary_other.tscn" id="1_h7a2f"]
+[ext_resource type="PackedScene" uid="uid://b62h4fk8tbgna" path="res://dictionary_nwl.tscn" id="1_i26rj"]
+[ext_resource type="PackedScene" uid="uid://vjv4072e4pkg" path="res://dictionary_searcher.tscn" id="2_eiy7p"]
+[ext_resource type="PackedScene" uid="uid://bqfl7gm323174" path="res://Scenes/KeyboardStuff/keyboard.tscn" id="4_qoqlk"]
+
+[node name="MainMenu" type="VBoxContainer" unique_id=408508820]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="DictionarySearcher" parent="." unique_id=1900799685 node_paths=PackedStringArray("nwl", "other", "keyboard", "output") instance=ExtResource("2_eiy7p")]
+nwl = NodePath("Dictionary_NWL")
+other = NodePath("DictionaryOther")
+keyboard = NodePath("../Keyboard")
+output = NodePath("../Output")
+
+[node name="Dictionary_NWL" parent="DictionarySearcher" unique_id=1593004674 instance=ExtResource("1_i26rj")]
+
+[node name="DictionaryOther" parent="DictionarySearcher" unique_id=164057999 instance=ExtResource("1_h7a2f")]
+
+[node name="Output" type="RichTextLabel" parent="." unique_id=1565691876]
+layout_mode = 2
+size_flags_vertical = 3
+text = "SCRABBLE PDF MIXER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keyboard" parent="." unique_id=1460508222 instance=ExtResource("4_qoqlk")]
+layout_mode = 2
+
+[connection signal="ON_EDIT" from="Keyboard" to="DictionarySearcher" method="_on_keyboard_on_edit"]

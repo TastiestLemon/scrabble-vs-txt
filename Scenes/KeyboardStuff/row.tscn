@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cd67f5xxy3424"]
+
+[node name="Row" type="HBoxContainer" unique_id=922542045]
+alignment = 1

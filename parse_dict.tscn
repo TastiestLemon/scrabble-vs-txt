@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bc6q75jp4vd35"]
+
+[ext_resource type="Script" uid="uid://blnatyq7bwnp8" path="res://parse_dict.gd" id="1_lc6pg"]
+
+[node name="ParseDict" type="Node" unique_id=625344018]
+script = ExtResource("1_lc6pg")

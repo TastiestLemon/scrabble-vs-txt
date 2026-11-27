@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bxq487n0dbem"]
+
+[ext_resource type="Script" uid="uid://jqff0o71g0ye" path="res://dictionary_other.gd" id="1_548rn"]
+
+[node name="DictionaryOther" type="Node" unique_id=164057999]
+script = ExtResource("1_548rn")

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b62h4fk8tbgna"]
+
+[ext_resource type="Script" uid="uid://bsnen6wr3c88r" path="res://dictionary_nwl.gd" id="1_0qwjh"]
+
+[node name="Dictionary_NWL" type="Node" unique_id=1593004674]
+script = ExtResource("1_0qwjh")

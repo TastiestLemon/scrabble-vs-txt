@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://vjv4072e4pkg"]
+
+[ext_resource type="Script" uid="uid://c0hgxpxbjsgtj" path="res://dictionary_searcher.gd" id="1_n7vji"]
+
+[node name="DictionarySearcher" type="Node" unique_id=1900799685]
+script = ExtResource("1_n7vji")
