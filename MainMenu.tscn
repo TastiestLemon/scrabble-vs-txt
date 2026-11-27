@@ -44,14 +44,22 @@ text = "INFO"
 [node name="Output" type="RichTextLabel" parent="." unique_id=1565691876]
 layout_mode = 2
 size_flags_vertical = 3
-text = "SCRABBLE + TXT
-Compare a TXT with the NWL Scrabble dictionary
+text = "SCRABBLE vs TXT
+Compare a TXT with the NASPA Word List
 
 Get x1 score for NWL words
 Get x2 score for shared words
 Get x3 score for words unique to the TXT
 
-The current TXT is Romeo and Juliet"
+The current TXT is Romeo and Juliet
+
+This app uses the Developer license of the NASPA Word List
+This app parses a given TXT into a word list
+This app does not store the original TXT
+This app is meant as \"transformative use\" of the source TXT
+
+Contact me for questions:
+elliotthstrait@gmail.com"
 horizontal_alignment = 1
 vertical_alignment = 1
 
