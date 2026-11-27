@@ -10,6 +10,20 @@ signal ON_EDIT
 @export var contents: PackedStringArray
 @export var coreButtons: HBoxContainer
 
+func _unhandled_key_input(event: InputEvent) -> void:
+	if not event.is_pressed():
+		return
+	if event.is_action("ui_text_backspace"):
+		_on_backspace_pressed()
+		return
+	if event.is_action("ui_text_delete"):
+		_on_clear_pressed()
+		return
+	var text = event.as_text().to_upper()
+	if text.length() == 1 and text >= "A" and text <= "Z":
+		output.text += text
+		ON_EDIT.emit()
+
 func _on_ready() -> void:
 	for line in contents:
 		var newRow = row.instantiate()

@@ -23,14 +23,45 @@ output = NodePath("../Output")
 
 [node name="DictionaryOther" parent="DictionarySearcher" unique_id=164057999 instance=ExtResource("1_h7a2f")]
 
+[node name="Pad" type="Control" parent="." unique_id=913322068]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=782807047]
+layout_mode = 2
+alignment = 1
+
+[node name="Unique" type="Button" parent="HBoxContainer" unique_id=1716987679]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "UNIQUES"
+
+[node name="Info" type="Button" parent="HBoxContainer" unique_id=1057499913]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "INFO"
+
 [node name="Output" type="RichTextLabel" parent="." unique_id=1565691876]
 layout_mode = 2
 size_flags_vertical = 3
-text = "SCRABBLE PDF MIXER"
+text = "SCRABBLE + TXT
+Compare a TXT with the NWL Scrabble dictionary
+
+Get x1 score for NWL words
+Get x2 score for shared words
+Get x3 score for words unique to the TXT
+
+The current TXT is Romeo and Juliet"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Keyboard" parent="." unique_id=1460508222 instance=ExtResource("4_qoqlk")]
 layout_mode = 2
 
+[node name="Pad2" type="Control" parent="." unique_id=433674379]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[connection signal="pressed" from="HBoxContainer/Unique" to="DictionarySearcher" method="_on_unique_pressed"]
+[connection signal="pressed" from="HBoxContainer/Info" to="DictionarySearcher" method="_on_info_pressed"]
 [connection signal="ON_EDIT" from="Keyboard" to="DictionarySearcher" method="_on_keyboard_on_edit"]

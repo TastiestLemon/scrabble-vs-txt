@@ -5,6 +5,8 @@ extends Node
 @export var keyboard: Keyboard
 @export var output: RichTextLabel
 
+@onready var OriginalText = output.text
+
 func Search(toFind: String, toSearch: PackedStringArray) -> int:
 	var low = 0;
 	var high: int = toSearch.size() - 1
@@ -43,3 +45,14 @@ func _on_keyboard_on_edit() -> void:
 		output.add_text(" in the original text.")
 	else:
 		output.add_text(" is only in the NWL dictionary...")
+
+func _on_info_pressed() -> void:
+	output.clear()
+	output.add_text(OriginalText)
+
+func _on_unique_pressed() -> void:
+	output.clear()
+	for word in other.words:
+		if Search(word, nwl.words) == -1:
+			output.add_text(word)
+			output.newline()
